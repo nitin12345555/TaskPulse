@@ -1,11 +1,9 @@
 export type TaskType = "image" | "audio" | "text" | "unknown";
 export type TaskStatus = "todo" | "in_progress" | "done" | "blocked" | "qa" | "unknown";
-
 export interface Assignee {
   id: string;
   name: string;
 }
-
 export interface Task {
   id: string;
   title: string;
@@ -16,7 +14,6 @@ export interface Task {
   updatedAt: number;
   meta: Record<string, unknown>;
 }
-
 export interface RawTask {
   id?: unknown;
   title?: unknown;
@@ -43,7 +40,6 @@ export interface TaskEventUpdate {
     updatedAt: number;
   };
 }
-
 export interface TaskEventAssigned {
   kind: "task.assigned";
   payload: {
@@ -51,7 +47,6 @@ export interface TaskEventAssigned {
     assignee: Assignee | null;
   };
 }
-
 export interface TaskEventAnnotationCreated {
   kind: "annotation.created";
   payload: {
@@ -60,5 +55,4 @@ export interface TaskEventAnnotationCreated {
     at: number;
   };
 }
-
 export type TaskEvent = TaskEventUpdate | TaskEventAssigned | TaskEventAnnotationCreated;

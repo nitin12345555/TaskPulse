@@ -8,7 +8,6 @@ export const statusOptions: Array<{ label: string; value: TaskStatus | "all" }> 
   { label: "Blocked", value: "blocked" },
   { label: "QA", value: "qa" },
 ];
-
 export const typeOptions: Array<{ label: string; value: TaskType | "all" }> = [
   { label: "All types", value: "all" },
   { label: "Image", value: "image" },
@@ -16,7 +15,6 @@ export const typeOptions: Array<{ label: string; value: TaskType | "all" }> = [
   { label: "Text", value: "text" },
   { label: "Unknown", value: "unknown" },
 ];
-
 export function formatDate(timestamp: number) {
   if (!Number.isFinite(timestamp) || Number.isNaN(timestamp)) {
     return "Unknown date";

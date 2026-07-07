@@ -63,37 +63,6 @@ export function TaskList() {
           <h2 className="text-lg font-bold text-zinc-900">Task Feed</h2>
           <p className="text-sm text-zinc-600">Live list of annotation tasks.</p>
         </div>
-        <div className="flex flex-col gap-2 sm:flex-row">
-          {/* <select
-            value={filterStatus}
-            onChange={(event) => setFilters({ status: event.target.value as typeof filterStatus, type: filterType, search })}
-            className="rounded border px-3 py-2"
-          >
-            {statusOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-          <select
-            value={filterType}
-            onChange={(event) => setFilters({ status: filterStatus, type: event.target.value as typeof filterType, search })}
-            className="rounded border px-3 py-2"
-          >
-            {typeOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-          <input
-            type="search"
-            value={search}
-            onChange={(event) => setFilters({ status: filterStatus, type: filterType, search: event.target.value })}
-            placeholder="Search tasks"
-            className="rounded border px-3 py-2"
-          /> */}
-        </div>
       </div>
 
       {stale && <div className="rounded border border-yellow-300 bg-yellow-50 p-3 text-sm text-yellow-900">Showing cached data; fresh data is loading.</div>}
